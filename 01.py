@@ -2003,6 +2003,6 @@ PUZZLE_INPUT = [
   9105
 ]
 
-# did this NOT manually
+# formatted the list NOT manually
 
 res = sum([i < j for (i, j) in zip(PUZZLE_INPUT, PUZZLE_INPUT[1::])])
