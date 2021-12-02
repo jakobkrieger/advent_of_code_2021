@@ -2005,4 +2005,15 @@ PUZZLE_INPUT = [
 
 # formatted the list NOT manually
 
-res = sum([i < j for (i, j) in zip(PUZZLE_INPUT, PUZZLE_INPUT[1::])])
+def get_number_of_increases(lst: list) -> int:
+  return sum([i < j for (i, j) in zip(lst, lst[1::])])
+
+# --- PART ONE ---
+
+res_1 = get_number_of_increases(PUZZLE_INPUT)
+print(res_1)
+
+# --- PART TWO ---
+
+res_2 = get_number_of_increases([i + j + k for (i, j, k) in zip(PUZZLE_INPUT, PUZZLE_INPUT[1::], PUZZLE_INPUT[2::])])
+print(res_2)
