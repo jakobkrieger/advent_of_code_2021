@@ -646,7 +646,7 @@ all_bingo_boards = [BingoBoard(bingo_board) for bingo_board in PUZZLE_INPUT_BING
 
 for num in PUZZLE_INPUT_RANDOM_NUMBERS:
 	for bb in all_bingo_boards:
-		if not bb.is_bingo():
+		if not bb._is_bingo:
 			bb.mark_number(num)
 			if bb.is_bingo():
 				score_last_winning_board = bb.score(num)
